@@ -1,0 +1,194 @@
+<html>
+<head>
+</head>
+<body>
+<script>
+
+//key value pairs starts here
+var data = {
+name : "john",
+age : 28
+}
+console.log(data.name);
+//key value pairs ends here
+
+//function starts here
+function  user(){
+    //block code
+    console.log("hello"); 
+}
+user();
+
+function  user1(num1){
+    console.log(num1); 
+}
+user1(10);
+
+
+function  user2(num2){
+    return num2+5 
+}
+var out = user2(10);
+console.log(out);
+//function ends here
+
+//conditional statements starts here
+//if if-else if-else-if-else
+var marks = 85;
+if(marks>90){
+  console.log('grade A');
+}
+else if(marks>55){
+console.log('grade B');
+}
+else{
+console.log('grade C');
+}
+
+//conditional statements ends here
+
+
+//looping starts here
+//for while loop
+//for(statement1;statement2;statement3){
+//block code
+//statement1 is variabel_declaration
+//statement2 is condition
+//statement3 is increment/decrement
+//}
+
+for(var i=1;i<5;i++){
+console.log("hello");
+}
+
+
+for(var j=1;j<5;j++){
+console.log("hello");
+}
+
+//for loop
+var output = 0;
+for(var k=1;k<=10;k++){
+output = output+i;
+}
+console.log(output);
+
+//while loop
+//var outside = 0;
+//while(condition){
+//block of the code
+//}
+var outside = 0;
+while(outside<=10){
+console.log(outside);
+outside++;
+}
+//looping ends here
+
+
+
+//isArray starts here
+var arraytext = [1,2,3];
+console.log(Array.isArray(arraytext));
+
+
+var arraytext1 = 1;
+console.log(Array.isArray(arraytext1));
+//isArray ends here
+
+
+//map starts here
+var maptext = [1,2,3,4];
+maptext.map(
+  function(element){
+console.log(element);
+}
+)
+
+var maptext1 = [1,2,3,4]
+var mapout = maptext1.map(
+function(element){
+return element+1;
+}
+)
+console.log(mapout);
+//map ends here
+
+//filter starts here
+var filtertext1 = [1,2,3,4]
+var filterout = filtertext1.filter(
+function(element){
+return element>2;
+}
+)
+console.log(filterout);
+//def:filter operator is behavies like based on condition
+//filter ends here
+
+//forEach starts here
+var foreachtext = [1,2,3,4];
+foreachtext.forEach(
+  function(element){
+    console.log(element);
+  }
+)
+//def:it assigns each element
+//forEach ends here
+
+
+//every starts here and some starts here
+var everytext = [1,2,3,4]
+var everyoutput = everytext.every(
+  function(element){
+	return element>2;
+  }
+)
+console.log(everyoutput);
+
+
+var sometext = [1,2,3,4]
+var someoutput = sometext.some(
+  function(element){
+	return element>2;
+  }
+)
+console.log(someoutput);
+//def:every operator also based on condition but based on below example if each and every condition not satisfied that shows false
+//def:some operator also based on condition but based on below example if 1 condition satisfied that shows true
+
+//every ends here
+
+
+//indexof starts here
+var indexoftext = [1,2,3,4];
+console.log(indexoftext.indexOf(4));
+//indexof ends here
+
+
+//lastindexof starts here
+var lastindexoftext = [1,2,3,4,5,6,4,8];
+console.log(lastindexoftext.lastIndexOf(4));
+//indexof ends here
+
+
+//stringify() starts here
+ var stringifytext =  {
+    name:'john',
+    age: 25
+  }
+var json = JSON.stringify(stringifytext);
+console.log(json);
+//def:convert the object to json will use stringify
+
+//stringify() ends here
+
+//valueOf() starts here
+var date = new Date();
+console.log(date);
+
+var date = new Date();
+console.log(date.valueOf());
+//valueOf() ends here
+</script>
+</body>
+</html>

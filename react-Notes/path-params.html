@@ -1,0 +1,46 @@
+//path params starts here
+import React from 'react'
+import { BrowserRouter,Routes,Route } from 'react-router-dom'
+import About from './Abouts'
+import Home from './Home'
+import Dashboard from './Dashboard'
+
+const App = () => {
+  return (
+    <div>
+      <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/About' element={<About />} />
+        <Route path='/Dashboard/:name' element={<Dashboard />} />
+      </Routes>
+      </BrowserRouter>
+    </div>
+  )
+}
+
+export default App
+
+//path params ends here
+
+//Dahboard starts here
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
+
+const Dashboard = () => {
+    let params = useParams();
+  return (
+    <div>
+       <center>
+        <h3>welcome to Dashboard page</h3>
+        <p>Name : {params.name}</p>
+        <Link to='/' className='Link'>Back to home</Link>
+      </center>
+    </div>
+  )
+}
+
+export default Dashboard
+
+//dahboard ends here

@@ -1,0 +1,10 @@
+1)Hooks is made for functional based not for class based
+2)suppose if we use will get error
+
+
+
+Events handlers
+-------------------
+1)onclick
+2)onchange
+3)onsubmit

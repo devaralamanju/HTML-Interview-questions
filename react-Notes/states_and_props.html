@@ -1,0 +1,152 @@
+//states starts here
+import React from "react";
+
+class App extends React.Component{
+  state = {
+    name : 'John',
+    age : 25
+  }
+  render(){
+    return(
+      <div>
+        <center>
+          <h3>Name: {this.state.name} and {this.state.age}</h3>
+        </center>
+      </div>
+    )
+  }
+}
+
+export default App;
+//states ends here
+
+//props starts here
+//import React from "react";
+//App.js starts here
+import Test from './Test';
+
+class App extends React.Component{
+  state = {
+    name : 'John',
+    age : 25
+  }
+  render(){
+    return(
+      <div>
+        <center>
+         <Test name = {this.state.name} age = {this.state.age}/>
+        </center>
+      </div>
+    )
+  }
+}
+
+export default App;
+//App.js ends here
+
+
+
+
+//
+
+//Test page .js starts here
+import React from 'react';
+
+class Test extends React.Component{
+    render(){
+        return(
+            <div>
+                <center>
+                    <h3>Name: {this.props.name} and age: {this.props.age}</h3>
+                </center>
+            </div>
+        )
+    }
+
+}
+
+export default Test;
+//Test page .js ends here
+//props ends here
+
+
+
+//useState starts here
+import React,{useState} from 'react'
+
+const App = () => {
+  const [name,setName] = useState('Leo');
+  return (
+    <div>
+      <center>
+        <h1>Name :{name}</h1>
+      </center>
+    </div>
+  )
+}
+
+export default App
+//useState ends here
+
+
+
+//
+import React,{useState} from 'react'
+
+const App = () => {
+  const [data,setData] = useState({
+    name: 'Neo',
+    age:25
+});
+  const {name,age} = data;
+  return (
+    <div>
+      <center>
+        <h1>Name :{name} and Age {age}</h1>
+      </center>
+    </div>
+  )
+}
+
+export default App
+//
+
+
+
+<!--starts-->
+//import React,{useState} from 'react'
+import Test from './Test';
+const App = () => {
+  const [data,setData] = useState({
+    name: 'Neo',
+    age:25
+});
+  const {name,age} = data;
+  return (
+    <div>
+      <center>
+        <Test name={name} age={age}/>
+      </center>
+    </div>
+  )
+}
+
+export default App
+//
+//
+import React from 'react';
+
+const Test = (props) => {
+        return(
+            <div>
+                <center>
+                    <h2>name: {props.name} and Age:{props.age}</h2>
+                </center>
+            </div>
+        )
+
+}
+
+export default Test;
+//
+<!--ends-->

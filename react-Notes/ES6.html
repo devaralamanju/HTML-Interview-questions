@@ -1,0 +1,135 @@
+<html>
+<head>
+</head>
+<body>
+<script>
+//var starts here
+{
+var data = 10;
+console.log(data);
+}
+console.log(data);
+//var ends here
+
+
+//let starts here
+//{
+//let datalet = 10;
+//}
+//console.log(datalet);
+//let ends here
+
+//const starts here
+
+const constdata = 10;
+let changeconst = constdata;
+console.log(changeconst);
+
+//const ends here
+
+//Arrow function start here
+const user = () => console.log("hello");
+user();
+
+const user1 = () => console.log("hello");
+user1(10);
+
+const user2 = (num1) => {return num1+5;}
+var output = user2(10);
+console.log(output);
+//Arrow function ends here
+
+
+//classes start here
+class classtext{
+  admin(){
+	console.log('From admin method');
+  }
+}
+let obj = new classtext();
+obj.admin();
+
+
+class classtext1{
+constructor(msg){
+this.msg = msg;
+}
+  admin1(){
+	console.log(this.msg);
+  }
+}
+let obj1 = new classtext1('Hi');
+obj1.admin1();
+//classes ends here
+
+
+//For..of starts here
+const arr = [1,2,3,4];
+for(const a of arr){
+console.log(a);
+}
+//for..of ends here
+
+
+//default parameter starts here
+function defaulttext(name){
+console.log(name);
+}
+defaulttext('John');
+
+
+
+function defaulttext1(name,age=20){
+console.log(name+" "+age);
+}
+defaulttext1('John',25);
+//default paraameter ends here
+
+
+//rest operator starts here
+function resttext(name,...remaining){
+  console.log(name+" "+remaining)
+}
+resttext('John',"mail@gmail.com",1231871);
+
+//importtant note:...rest operator will mention end place 
+//def:suppose if we are having more values we can use ...rest operator(default parameter we are mentioning 2 values or 3 values)
+
+
+//rest operator ends here
+
+
+
+//spread operator starts here
+let arr1 = [1,2,3,4,5]
+let arr2 = [20,30,10,40];
+let arr3 = [...arr1,...arr2];
+console.log(arr3);
+//spread ends here
+
+
+//Destructuring concept starts here
+let person = {
+  name: "John",
+  age: 12,
+  mail: 'manjula@gmail.com'
+}
+console.log(person.name);
+
+
+let person1 = {
+  name: "John",
+  age: 12,
+  mail: 'manjula@gmail.com'
+}
+const {name,age,mail} = person1
+console.log(age);
+
+
+let person2 = [1,2,3,4]
+const [a,b,c,d] = person2;
+console.log(b);
+//Destrcturing ends here
+</script>
+</body>
+</html>

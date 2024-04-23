@@ -1,0 +1,39 @@
+import React from 'react'
+import './App.css'
+import img from './img';
+
+
+
+const App = () =>{
+  const arr = [
+    "https://www.verywellfit.com/thmb/WY_NtJB9XE1wZTaKbk2syDPITUc=/3865x2576/filters:fill(FFDB5D,1)/different-types-of-food-on-rustic-wooden-table-861188910-5bd1d6f846e0fb00519d99f9.jpg",
+    "https://th.bing.com/th/id/R.a86f782a59048e426990de154dc24da6?rik=2JqXhyZexwSjxw&riu=http%3a%2f%2fphotos.demandstudios.com%2fgetty%2farticle%2f81%2f182%2f87531574.jpg&ehk=Bc7XclMU5eLighwhBrZM06Grnq%2bEah8Ky%2flW8ze9dAk%3d&risl=1&pid=ImgRaw&r=0",
+    "https://awhealthcare.com/wp-content/uploads/2016/09/Healthy-Food.jpeg" 
+ 
+  ]
+  return (
+    <div className='App'>
+        {arr.map((item,index) => <img key={index} src={item} style={{height: 200, width: 200}}/>)}
+    </div>
+  )
+}
+
+export default App
+//App.js ends here
+
+//Img.js starts here
+import React from 'react'
+
+const img = (props) => {
+  return (
+    <div>
+
+      <img className="photo" src={props.src} height={100} width={100}  alt='veg-img'/>
+
+    </div>
+  )
+}
+
+export default img;
+
+//Img.js ends here

@@ -1,0 +1,111 @@
+//onclick starts here
+import React from 'react'
+
+const App = () => {
+  return (
+    <div>
+      <center>
+        <button onClick={ () =>alert("hello") }>click me</button>
+        
+      </center>
+    </div>
+  )
+}
+
+export default App
+//onclick ends here
+
+//onChange starts here
+import React,{useState} from 'react'
+
+const App = () => {
+  const [name,setName] = useState('');
+  return (
+    <div>
+      <center>
+        Name:{name} <br/>
+        <input type="text" name="name" onChange={(e)=>setName(e.target.value)}/>
+        
+      </center>
+    </div>
+  )
+}
+
+export default App
+
+//onChange ends here
+
+
+//onsubmit starts here
+import React,{useState} from 'react'
+
+const App = () => {
+  const [data,setData] = useState({
+    email : ' ',
+    password:' '
+  });
+  const changeHandler = e =>{
+    setData({...data,[e.target.name]:e.target.value})
+  }
+  const submitHandler = e =>{
+    e.preventDefault();
+    console.log(data);
+  }
+  return (
+
+    <div>
+      <center>
+       <form onSubmit={submitHandler}>
+        <label>E-mail</label><br/>
+        <input type="text" name="email" onChange={changeHandler}/><br/>
+        <label>Password</label><br/>
+        <input type="text" name="password" onChange={changeHandler}/><br/>
+        <input type="submit" value="login" /><br/>
+       </form>
+        
+      </center>
+    </div>
+  )
+}
+
+export default App
+//onsubmit ends here
+
+//validations starts here
+import React,{useState} from 'react'
+
+const App = () => {
+  const [data,setData] = useState({
+    email : ' ',
+    password:' '
+  });
+  const changeHandler = e =>{
+    setData({...data,[e.target.name]:e.target.value})
+  }
+  const submitHandler = e =>{
+    e.preventDefault();
+    if(data.password.length<5){
+      alert("provide password length > 5")
+    }
+    console.log(data);
+  }
+  return (
+
+    <div>
+      <center>
+       <form onSubmit={submitHandler}>
+        <label>E-mail</label><br/>
+        <input type="text" name="email" onChange={changeHandler}/><br/>
+        <label>Password</label><br/>
+        <input type="text" name="password" onChange={changeHandler}/><br/>
+        <input type="submit" value="login" /><br/>
+       </form>
+        
+      </center>
+    </div>
+  )
+}
+
+export default App
+
+//validations ends here
